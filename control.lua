@@ -11,8 +11,6 @@ function tms_toggle(event)
         if player.selected.train and player.selected.train.valid then
             local train = player.selected.train
 
-            player.print(train.front_stock.name)
-
             if train.manual_mode == true then
                 train.manual_mode = false
             else
