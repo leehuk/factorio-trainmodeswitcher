@@ -3,7 +3,8 @@ data:extend({
         name = "tms-switcher",
         type = "selection-tool",
         flags = {
-            "hidden"
+            "hidden",
+            "only-in-cursor"
         },
         icon = "__TrainModeSwitcher__/graphics/icons/tms_switcher_64.png",
         icon_size = 64,

@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2020-02-24
+  Changes:
+    - Mark the selection tool as "only-in-cursor" so it doesn't go to inventory
+    - Add a shortcut bar item to provide the selection tool
+---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 2020-01-30
   Changes:
