@@ -1,9 +1,9 @@
 {
     "name": "TrainModeSwitcher",
     "title": "Train Mode Switcher",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "factorio_version": "1.1",
-    "date": "2020-01-30",
+    "date": "2020-02-24",
     "author": "leeh",
     "homepage": "",
     "description": "Swaps highlighted trains between automatic/manual.  If no train is highlighted, provides a selection tool to drag across multiple trains",
