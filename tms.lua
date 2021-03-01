@@ -1,7 +1,7 @@
 function tms_toggle(event)
     local player = game.players[event.player_index]
 
-    if not player or not player.valid then
+    if not player or not player.valid or not event.prototype_name or event.prototype_name ~= "tms-toggle" then
         return
     end
 
