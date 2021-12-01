@@ -44,7 +44,7 @@ end
 function tms_selectiontool(event)
     local player = game.players[event.player_index]
 
-    if not player or not player.valid or not event.entities then
+    if not player or not player.valid or not event.entities or event.item ~= "tms-switcher" then
         return
     end
 
