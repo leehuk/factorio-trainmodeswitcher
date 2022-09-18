@@ -41,12 +41,8 @@ function tms_provide_selectiontool(event)
     })
 end
 
-function tms_selectiontool(event)
-    local player = game.players[event.player_index]
-
-    if not player or not player.valid or not event.entities or event.item ~= "tms-switcher" then
-        return
-    end
+function tms_enact(player, event, alt)
+    local config = settings.get_player_settings(player)
 
     local trains_switched = {}
     for _, ent in pairs(event.entities) do
@@ -55,7 +51,13 @@ function tms_selectiontool(event)
                 local train = ent.train
 
                 if not trains_switched[train.id] then
-                    if train.manual_mode == true then
+                    if config['tms-alt-mode'].value then
+                        if alt then
+                            train.manual_mode = true
+                        else
+                            train.manual_mode = false
+                        end
+                    elseif train.manual_mode == true then
                         train.manual_mode = false
                     else
                         train.manual_mode = true
@@ -66,6 +68,26 @@ function tms_selectiontool(event)
             end
         end
     end
+end
+
+function tms_selectiontool(event)
+    local player = game.players[event.player_index]
+
+    if not player or not player.valid or not event.entities or event.item ~= "tms-switcher" then
+        return
+    end
+
+    tms_enact(player, event, false)
+end
+
+function tms_selectiontool_alt(event)
+    local player = game.players[event.player_index]
+
+    if not player or not player.valid or not event.entities or event.item ~= "tms-switcher" then
+        return
+    end
+
+    tms_enact(player, event, true)
 end
 
 function tms_shortcut(event)
