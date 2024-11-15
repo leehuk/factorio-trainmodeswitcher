@@ -10,22 +10,18 @@ data:extend({
         localised_name = {
             "shortcut.tms-toggle"
         },
-        icon = {
-            filename = "__TrainModeSwitcher__/graphics/icons/tms_switcher_32.png",
-            priority = "extra-high-no-scale",
-            size = 32,
-            scale = 1,
-            flags = {
-                "icon"
+        icons = {
+            {
+                icon = "__TrainModeSwitcher__/graphics/icons/tms_switcher_32.png",
+                icon_size = 32,
+                scale = 1
             }
         },
-        small_icon = {
-            filename = "__TrainModeSwitcher__/graphics/icons/tms_switcher_24.png",
-            priority = "extra-high-no-scale",
-            size = 24,
-            scale = 1,
-            flags = {
-                "icon"
+        small_icons = {
+            {
+                icon = "__TrainModeSwitcher__/graphics/icons/tms_switcher_24.png",
+                icon_size = 24,
+                scale = 1
             }
         }
     }
